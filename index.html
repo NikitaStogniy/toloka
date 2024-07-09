@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toloka</title>
+  </head>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      max-width: 1250px;
+      margin: auto;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @media (max-width: 768px) {
+        height: auto;
+      }
+    }
+    button {
+      cursor: pointer;
+      border: none;
+      height: 40px;
+      color: #fff;
+      display: flex;
+      padding: 8px 24px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 10px;
+      background: #7177ff;
+      transition: 0.3s;
+    }
+    button:hover {
+      transition: 0.3s;
+      background: #5057ff;
+    }
+    .disabled {
+      background: #ccc;
+      color: #fff;
+      cursor: not-allowed;
+    }
+    h1 {
+      color: #000;
+
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    p {
+      color: #000;
+      text-align: center;
+
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    img {
+      width: 198px;
+      height: 244px;
+      border-radius: 10px;
+      background: #d9d9d9;
+    }
+    .pagination {
+      color: #999;
+      text-align: center;
+
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    main {
+      display: flex;
+      gap: 16px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0px;
+      padding-bottom: 40px;
+      @media (max-width: 768px) {
+        margin-top: 100px;
+        flex-direction: column;
+      }
+    }
+    .pagination-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    nav {
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: calc(100% - 48px);
+
+      @media (max-width: 768px) {
+        position: fixed;
+        background: #fff;
+      }
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .card-title {
+      padding: 0;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      height: 40px;
+    }
+    button:active {
+      background: #5057ff;
+    }
+  </style>
+  <body>
+    <header>
+      <nav>
+        <h1>Найти дубликат</h1>
+        <div class="pagination-wrapper">
+          <p class="pagination">4/8</p>
+          <button>Далее</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="original card">
+        <img src="img/original.png" alt="original" />
+        <p class="card-title">Оригинал</p>
+      </div>
+      <div id="1" class="card">
+        <img src="img/original.png" alt="original" />
+        <button>Выбрать</button>
+      </div>
+      <div id="2" class="card">
+        <img src="img/original.png" alt="original" />
+        <button>Выбрать</button>
+      </div>
+      <div id="3" class="card">
+        <img src="img/original.png" alt="original" />
+        <button>Выбрать</button>
+      </div>
+    </main>
+  </body>
+</html>
